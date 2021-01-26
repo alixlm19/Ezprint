@@ -65,7 +65,7 @@ def cprint(
     reset: bool = True,
 ):
     """
-    Prints to the output stream using the specified colors.
+    Color prints to the output stream.
 
     Parameters
     ----------
