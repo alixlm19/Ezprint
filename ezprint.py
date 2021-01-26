@@ -23,6 +23,11 @@ def set_output_stream(out: Any):
     _output_stream = out
 
 
+def reset_style():
+    """Resets the active output stream style"""
+    _output_stream.write("\033[0m")
+
+
 def set_decoration(bold: bool = False, underline: bool = False, inverted: bool = False):
     """
     Sets the text decoration of the active output stream
