@@ -15,10 +15,10 @@ def set_output_stream(out: Any):
     """
     has_write_method = getattr(out, "write", False)
     if not has_write_method:
-        raise AttributeError("Passed output stream does not have write method.")
+        raise AttributeError("Output stream does not have write method.")
 
     if not callable(out.write):
-        raise AttributeError("Passed output stream does not have write method.")
+        raise AttributeError("Output stream write method is not callable.")
 
     _output_stream = out
 
